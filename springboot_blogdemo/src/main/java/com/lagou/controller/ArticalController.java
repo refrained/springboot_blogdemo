@@ -20,6 +20,11 @@ public class ArticalController {
     @Autowired
     private ArticalRepository articalRepository;
 
+    @RequestMapping("/")
+    public String toIndex(){
+        return "redirect:/index";
+    }
+
     @RequestMapping("/index")
     public String index(Model model, @RequestParam(required = false,defaultValue = "0") int page, @RequestParam(required = false,defaultValue = "3")int size){
 
